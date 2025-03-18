@@ -1,0 +1,18 @@
+.main{
+    text-shadow: 3px 4px crimson
+}
+.container{
+    background-color: blueviolet;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding: 20px;
+    
+}
+.rameez10{
+    background-color: aquamarine;
+    padding: 20px;
+    margin-top: 30px;
+    border: 13px solid blue;
+    border-radius: 20px;
+}
