@@ -1,0 +1,78 @@
+/* Reset default margin and padding for body and nav */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles for navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px; /* Add padding for spacing */
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Space out logo and navigation links */
+    align-items: center; /* Vertically center items */
+}
+
+/* Style the logo */
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Style the list */
+.navbar ul {
+    list-style-type: none;
+    display: flex; /* Use flexbox to align list items horizontally */
+    padding: 0;
+}
+
+/* Style each list item */
+.navbar ul li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Optional: Add hover effect */
+.navbar ul li:hover {
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Style the hamburger icon (3 vertical lines) */
+#hamburger-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Initially hide the hamburger icon */
+}
+
+/* Hide the checkbox (it's just a hidden toggle) */
+.menu-toggle {
+    display: none;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    /* Hide the navigation links on small screens */
+    .navbar ul {
+        display: none; /* Hide the navbar items */
+        flex-direction: column; /* Stack the items vertically */
+        background-color: #333; /* Make sure the menu has the same background color */
+        width: 100%; /* Take up full width */
+        position: absolute; /* Position it over the page */
+        top: 60px; /* Adjust to position it below the navbar */
+        left: 0;
+        padding: 10px 0;
+    }
+    
+    /* Show the hamburger icon on mobile */
+    #hamburger-icon {
+        display: block; /* Show the hamburger icon */
+    }
+
+    /* Show the nav links when the checkbox is checked */
+    .menu-toggle:checked + #hamburger-icon + .navbar ul {
+        display: flex; /* Make the list visible */
+    }
+}
